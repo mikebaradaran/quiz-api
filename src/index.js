@@ -20,6 +20,11 @@ app.post('/quiz', async (req, res) => {
     const id = await quiz.saveQuizAsync(req.body);
     res.status(200).json({ id });
 });
+app.get('/qa', async (req, res) => {
+    res.status(400).json({
+        message: 'Welcome :)'        
+    });
+});
 
 // Get quiz (to review or edit it)
 app.get('/quiz/:id', async (req, res) => {
